@@ -6,3 +6,35 @@
 .main {
   display: flex;
 }
+
+::-webkit-scrollbar-button {
+  background-image: none;
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecedee
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: rgba(255, 140, 0, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 140, 0, 0.8);
+}
+
+::-webkit-resizer {
+  background-image: none;
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px
+}
+
+::-webkit-scrollbar {
+  width: 7.5px;
+}

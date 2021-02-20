@@ -1,0 +1,10 @@
+.all-posts-block {
+  padding: 20px;
+}
+
+.all-posts-block h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 400;
+}

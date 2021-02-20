@@ -1,0 +1,55 @@
+.posts {
+  padding: 20px;
+}
+
+.posts h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.new-post-input-area {
+  display: flex;
+}
+
+.post-textarea {
+  width: 500px;
+  resize: none;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 50px;
+}
+
+.new-post-button {
+  font-size: 16px;
+  margin-left: 25px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.new-post-button:hover {
+  background: rgba(37, 39, 42, 0.95);
+  color: white;
+  cursor: pointer;
+  transition-property: background, color;
+  transition-duration: 0.4s;
+}
+
+.attach-block {
+  display: flex;
+  margin-top: 5px;
+}
+
+.attach-block img {
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.attach-block img:hover {
+  cursor: pointer;
+}
