@@ -52,4 +52,5 @@
 
 .attach-block img:hover {
   cursor: pointer;
+  transform: translate3d(3px, -1px, 0px);
 }
