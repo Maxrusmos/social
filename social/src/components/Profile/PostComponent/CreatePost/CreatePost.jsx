@@ -1,9 +1,9 @@
 import React from 'react';
 import './createPost.css';
 
-import attachPhoto from './../../res/attachPhoto.png';
-import attachFile from './../../res/attachFile.png';
-import attachMusic from './../../res/attachMusic.png';
+import attachPhoto from './../../../../res/attachPhoto.png';
+import attachFile from './../../../../res/attachFile.png';
+import attachMusic from './../../../../res/attachMusic.png';
 
 const CreatePost = () => {
   return (

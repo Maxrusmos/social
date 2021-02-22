@@ -1,6 +1,5 @@
 import React from 'react';
-import CreatePost from '../CreatePost/CreatePost';
-import Post from '../Post/Post';
+import PostComponent from './PostComponent/PostComponent';
 import './profile.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
@@ -8,13 +7,8 @@ const Profile = (props) => {
   return (
     <>
       <div className="profile-container">
-      <ProfileInfo></ProfileInfo>
-        <div className="create-post-block">
-          <CreatePost></CreatePost>
-        </div>
-        <div className="my-posts">
-          <Post message="keke"></Post>
-        </div>
+        <ProfileInfo></ProfileInfo>
+        <PostComponent></PostComponent>
       </div>
     </>
   )

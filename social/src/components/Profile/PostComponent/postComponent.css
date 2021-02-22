@@ -1,0 +1,19 @@
+.create-post-block {
+  margin: 10px;
+  height: 190px;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+}
+
+.my-posts {
+  margin: 10px;
+  padding: 20px;
+  height: 5000px;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+}
+
+.my-posts h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 400;
+}

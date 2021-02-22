@@ -5,7 +5,6 @@ const Post = (props) => {
   return (
     <>
       <div className="all-posts-block">
-        <h2>Posts</h2>
         <div>
           {props.message}
         </div>

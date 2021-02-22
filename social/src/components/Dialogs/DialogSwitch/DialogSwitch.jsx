@@ -5,19 +5,22 @@ import DialogSwitchItem from './DialogSwitchItem/DialogSwitchItem';
 
 
 const DialogSwitch = (props) => {
+  let dialogsData = [
+    {id: 1, name: "Адиянов Роман"}, 
+    {id: 2, name: "Якупова Айгуль"}, 
+    {id: 3, name: "Жилин Даниил"}, 
+    {id: 4, name: "Стрижаков Андрей"}, 
+    {id: 5, name: "Лангавый Григорий"}
+  ];
+
+  let dialogsElements = dialogsData.map(d => <DialogSwitchItem name={d.name} id={d.id}></DialogSwitchItem>);
+
   return (
-    <>
       <div className="dialogs-switch">
         <h2>Select Chat</h2>
         <hr />
-        <DialogSwitchItem name="Адиянов Роман" id="1"></DialogSwitchItem>
-        <DialogSwitchItem name="Якупова Айгуль" id="2"></DialogSwitchItem>
-        <DialogSwitchItem name="Жилин Даниил" id="3"></DialogSwitchItem>
-        <DialogSwitchItem name="Стрижаков Андрей" id="4"></DialogSwitchItem>
-        <DialogSwitchItem name="Лангавый Григорий" id="5"></DialogSwitchItem>
-
+        {dialogsElements}
       </div>
-    </>
   )
 }
 
