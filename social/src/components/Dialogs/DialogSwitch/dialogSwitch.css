@@ -1,0 +1,7 @@
+.dialogs-switch {
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+  margin: 10px;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}

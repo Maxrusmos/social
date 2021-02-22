@@ -1,0 +1,37 @@
+.message {
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.4);
+  margin: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  max-width: 400px;
+  border-radius: 7px;
+}
+
+.message-title {
+  display: flex;
+  margin: 8px;
+}
+
+.message-title img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.message h3{
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.message hr {
+  margin: 5px;
+}
+
+.message-text {
+  margin: 8px;
+}

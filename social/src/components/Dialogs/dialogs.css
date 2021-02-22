@@ -8,45 +8,7 @@
   top: 80px;
 }
 
-.dialogs-switch {
-  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
-  margin: 10px;
-  height: 100%;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-.selected-dialog {
-  width: 100%;
-  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
-  margin: 10px;
-  margin-left: 0;
-  height: 100%;
-}
-
-.dialog-switch-item {
-  width: 300px;
-  height: 40px;
-  margin: 10px;
-  padding: 5px;
-  padding-left: 20px;
-  line-height: 40px;
-  font-size: 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
-}
-
-.dialog-switch-item:hover {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  cursor: pointer;
-  transition-property: box-shadow;
-  transition-duration: 0.4s;
-  transform: translate3d(5px, -2px, 0px);
-  box-shadow: 0 13px 27px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.dialogs-switch h2 {
+.selected-dialog h2, .dialogs-switch h2 {
   margin: 0;
   margin-bottom: 20px;
   font-size: 25px;
@@ -54,6 +16,6 @@
   text-align: center;
 }
 
-.dialogs-switch hr {
+.selected-dialog hr, .dialogs-switch hr {
   margin-bottom: 20px;
 }
