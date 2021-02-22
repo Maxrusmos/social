@@ -9,7 +9,7 @@ import Music from '../Music/Music';
 import Settings from '../Settings/Settings';
 import './layout.css';
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <>
       <BrowserRouter>
@@ -18,11 +18,11 @@ const Layout = () => {
           <div className="main">
             <Menu></Menu>
             <div className="app-wrapper-content">
-              <Route path="/dialogs" component={Dialogs}></Route>
-              <Route path="/profile" component={Profile}></Route>
-              <Route path="/news" component={News}></Route>
-              <Route path="/music" component={Music}></Route>
-              <Route path="/settings" component={Settings}></Route>
+              <Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}></Dialogs> }></Route>
+              <Route path="/profile" render={ () => <Profile postsData={props.postsData}></Profile> }></Route>
+              <Route path="/news" render={ () => <News></News> }></Route>
+              <Route path="/music" render={ () => <Music></Music> }></Route>
+              <Route path="/settings" render={ () => <Settings></Settings> }></Route>
             </div>
           </div>
         </div>

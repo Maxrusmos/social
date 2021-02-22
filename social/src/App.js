@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from './components/Layout/Layout';
 
-const App = () => {
+const App = (props) => {
+  console.log(props);
   return (
     <>
-      <Layout></Layout>
+      <Layout postsData={props.postsData} dialogsData={props.dialogsData} messagesData={props.messagesData}></Layout>
     </>
   ) 
 }
