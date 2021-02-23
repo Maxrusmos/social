@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './menu.css';
+import SideBar from './SideBar/SideBar';
 
-const Menu = () => {
+const Menu = (props) => {
   return (
     <>
       <div className="menu">
@@ -26,6 +27,16 @@ const Menu = () => {
             Music
           </div>
         </NavLink>
+        <NavLink className="nav-links" to="/friends">
+          <div className="menu-item">
+            Friends
+          </div>
+        </NavLink>
+        <hr/>
+        <div className="friends-sideBar-block">
+          <SideBar sideBarData={props.sideBarData}></SideBar>
+        </div>
+        <hr/>
         <NavLink className="nav-links" to="/settings">
           <div className="menu-item">
             Settings

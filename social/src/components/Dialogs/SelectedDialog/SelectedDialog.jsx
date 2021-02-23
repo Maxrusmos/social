@@ -3,7 +3,6 @@ import Message from './Message/Message';
 import './selectedDialog.css';
 
 const SelectedDialog = (props) => {
-  console.log(props);
   let messagesElements = props.messagesData.map(m => <Message message={m.message}></Message>);
 
   return (

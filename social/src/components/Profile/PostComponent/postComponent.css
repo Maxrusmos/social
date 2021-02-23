@@ -1,5 +1,6 @@
 .create-post-block {
   margin: 10px;
+  margin-bottom: 0;
   height: 190px;
   box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
 }

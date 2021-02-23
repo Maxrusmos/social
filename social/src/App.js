@@ -5,7 +5,12 @@ const App = (props) => {
   console.log(props);
   return (
     <>
-      <Layout postsData={props.postsData} dialogsData={props.dialogsData} messagesData={props.messagesData}></Layout>
+      <Layout 
+        postsData={props.appState.profilePage.postsData} 
+        dialogsData={props.appState.dialogPage.dialogsData} 
+        messagesData={props.appState.dialogPage.messagesData}
+        sideBarData={props.appState.sideBar.sideBarData}>
+      </Layout>
     </>
   ) 
 }

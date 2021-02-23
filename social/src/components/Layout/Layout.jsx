@@ -8,6 +8,7 @@ import News from '../News/News';
 import Music from '../Music/Music';
 import Settings from '../Settings/Settings';
 import './layout.css';
+import Friends from '../Friends/Friends';
 
 const Layout = (props) => {
   return (
@@ -16,12 +17,13 @@ const Layout = (props) => {
         <div className="container">
           <Header></Header>
           <div className="main">
-            <Menu></Menu>
+            <Menu sideBarData={props.sideBarData}></Menu>
             <div className="app-wrapper-content">
-              <Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}></Dialogs> }></Route>
               <Route path="/profile" render={ () => <Profile postsData={props.postsData}></Profile> }></Route>
+              <Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}></Dialogs> }></Route>
               <Route path="/news" render={ () => <News></News> }></Route>
               <Route path="/music" render={ () => <Music></Music> }></Route>
+              <Route path="/friends" render={ () => <Friends></Friends>}></Route>
               <Route path="/settings" render={ () => <Settings></Settings> }></Route>
             </div>
           </div>

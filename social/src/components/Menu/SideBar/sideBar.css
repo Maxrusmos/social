@@ -1,0 +1,18 @@
+.sideBar-container {
+  margin: 10px;
+}
+
+.friend-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 8px;
+  transition-duration: 0.8s;
+}
+
+.friend-photo:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+  transition-duration: 1s;
+}
