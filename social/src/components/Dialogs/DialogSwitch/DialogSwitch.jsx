@@ -5,7 +5,7 @@ import DialogSwitchItem from './DialogSwitchItem/DialogSwitchItem';
 
 
 const DialogSwitch = (props) => {
-  let dialogsElements = props.dialogsData.map(d => <DialogSwitchItem name={d.name} id={d.id}></DialogSwitchItem>);
+  let dialogsElements = props.dialogsData.map(d => <DialogSwitchItem name={d.name} id={d.id} url={d.url}></DialogSwitchItem>);
 
   return (
       <div className="dialogs-switch">

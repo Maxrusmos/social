@@ -1,19 +1,27 @@
 import React from 'react';
 import './createPost.css';
-
 import attachPhoto from './../../../../res/attachPhoto.png';
 import attachFile from './../../../../res/attachFile.png';
 import attachMusic from './../../../../res/attachMusic.png';
 
-const CreatePost = () => {
+const CreatePost = (props) => {
+
+  let newPostElement = React.createRef();
+
+  let addPostButtonClick = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+    newPostElement.current.value = '';
+  }
+
   return (
     <>
       <div className="posts">
         <h2>Create Post</h2>
         <div className="new-post-block">
           <div className="new-post-input-area">
-            <textarea className="post-textarea" name="post-textarea" id="" cols="30" rows="10"></textarea>
-            <button className="new-post-button">New Post</button>
+            <textarea className="post-textarea" name="post-textarea" id="" cols="30" rows="10" ref={ newPostElement }></textarea>
+            <button className="new-post-button" onClick={ addPostButtonClick }>New Post</button>
           </div>
           <div className="attach-block">
             <div className="attach-photo">

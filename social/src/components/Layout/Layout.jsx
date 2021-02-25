@@ -19,7 +19,7 @@ const Layout = (props) => {
           <div className="main">
             <Menu sideBarData={props.sideBarData}></Menu>
             <div className="app-wrapper-content">
-              <Route path="/profile" render={ () => <Profile postsData={props.postsData}></Profile> }></Route>
+              <Route path="/profile" render={ () => <Profile postsData={props.postsData} addPost={props.addPost}></Profile> }></Route>
               <Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}></Dialogs> }></Route>
               <Route path="/news" render={ () => <News></News> }></Route>
               <Route path="/music" render={ () => <Music></Music> }></Route>

@@ -9,7 +9,7 @@ const PostComponent = (props) => {
   return (
     <>
       <div className="create-post-block">
-        <CreatePost></CreatePost>
+        <CreatePost addPost={props.addPost}></CreatePost>
       </div>
       <div className="my-posts">
       <h2>Posts</h2>

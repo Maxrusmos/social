@@ -6,4 +6,14 @@
   padding: 15px;
   height: 100%;
   box-sizing: border-box;
+  position: relative;
+}
+
+.messageElements-helper-block { 
+  height: 80%;
+  overflow-y: auto;
+}
+
+.newMessage {
+  width: 100%;
 }
