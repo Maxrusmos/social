@@ -1,3 +1,81 @@
-.all-posts-block {
+.post {
+  border: 0.5px solid lightgray;
+  padding: 10px;
+  border-radius: 2px;
+  height: 100%;
+  box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.3);
+  margin-top: 10px;
+}
+
+.accountPicture-date-block {
+  padding-top: 5px;
+  display: flex;
+}
+
+.name-date-block {
+  height: 60px;
+  line-height: 24px;
   margin-bottom: 10px;
+}
+
+.name-date-block h3 {
+  margin: 5px 0px 0px 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.name-date-block p {
+  margin: 0px 0px 0px 10px;
+  color: gray;
+}
+
+.accountPicture-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-textBlock {
+  font-size: 18px;
+  padding: 5px;
+  white-space: pre-line;
+}
+
+.likes-comment-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.likes-block {
+  display: flex;
+  line-height: 20px;
+}
+
+.likePicture-img {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  transition-duration: 0.8s;
+}
+
+.likes-block span {
+  font-size: 20px;
+}
+
+.comment-block {
+  line-height: 20px;
+}
+
+.commentPicture-img {
+  width: 22px;
+  height: 22px;
+  transition-duration: 0.8s;
+}
+
+.likePicture-img:hover, .commentPicture-img:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+  transition-duration: 1s;
 }
