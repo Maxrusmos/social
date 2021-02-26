@@ -7,8 +7,10 @@ let state = {
       {id: 3, message: "Как дела?", likesCount: 12}, 
       {id: 2, message: "Чем занят?", likesCount: 12}, 
       {id: 4, message: "Сдал лабу?", likesCount: 12}, 
-      {id: 5, message: "Смотри, мой первый пост!", likesCount: 12}
+      {id: 5, message: "Смотри, мой первый пост!", likesCount: 12},
     ],
+    newPostText: '', 
+    profilePhotoUrl: 'https://sun1-93.userapi.com/s/v1/if1/w6Khg45610v5XNTKOzzFOW9mnVMs7XPlhzkSOjhW8mD5F8Isoj8rUlg-kgw3M4BACAJnPeUa.jpg?size=200x0&quality=96&crop=195,1,1616,1616&ava=1',
   },
 
   dialogPage: {
@@ -46,13 +48,19 @@ let state = {
   },
 }
 
-export let addPost = (postText) => {
+export let addPost = () => {
   let newPost = {
     id: 6,
-    message: postText,
+    message: state.profilePage.newPostText,
     likesCount: 0
   };
   state.profilePage.postsData.push(newPost);
+  state.profilePage.newPostText = '';
+  rerenderTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderTree(state);
 }
 
