@@ -12,9 +12,8 @@ const PostComponent = (props) => {
     <>
       <div className="create-post-block">
         <CreatePost
-          addPost={props.addPost}
           newPostText={props.newPostText}
-          updateNewPostText={props.updateNewPostText}
+          dispatch={props.dispatch}
         ></CreatePost>
       </div>
       <div className="my-posts">

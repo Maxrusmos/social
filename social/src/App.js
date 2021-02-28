@@ -10,8 +10,7 @@ const App = (props) => {
         dialogsData={props.appState.dialogPage.dialogsData} 
         messagesData={props.appState.dialogPage.messagesData}
         sideBarData={props.appState.sideBar.sideBarData}
-        addPost={props.addPost}
-        updateNewPostText={props.updateNewPostText}
+        dispatch={props.dispatch}
         profilePhotoUrl={props.appState.profilePage.profilePhotoUrl}>
       </Layout>
     </>
