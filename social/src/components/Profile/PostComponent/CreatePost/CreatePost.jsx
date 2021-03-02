@@ -3,18 +3,18 @@ import "./createPost.css";
 import attachPhoto from "./../../../../res/attachPhoto.png";
 import attachFile from "./../../../../res/attachFile.png";
 import attachMusic from "./../../../../res/attachMusic.png";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/state";
 
 const CreatePost = (props) => {
   let newPostElement = React.createRef();
 
   let addPostButtonClick = () => {
-    props.dispatch({type: 'ADD-POST'});
+    props.dispatch(addPostActionCreator());
   }
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = { type: 'UPDATE-NEW-POST-TEXT', newText: text };
-    props.dispatch(action);
+    props.dispatch(updateNewPostTextActionCreator(text));
   }
 
   return (
