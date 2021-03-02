@@ -33,8 +33,10 @@ const Layout = (props) => {
               path="/dialogs"
               render={() => (
                 <Dialogs
+                  newMessageText={props.newMessageText}
                   dialogsData={props.dialogsData}
                   messagesData={props.messagesData}
+                  dispatch={props.dispatch}
                 ></Dialogs>
               )}
             ></Route>

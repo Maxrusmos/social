@@ -3,19 +3,20 @@ import "./createPost.css";
 import attachPhoto from "./../../../../res/attachPhoto.png";
 import attachFile from "./../../../../res/attachFile.png";
 import attachMusic from "./../../../../res/attachMusic.png";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/state";
+import {
+  addPostCreator,
+  updateNewPostTextCreator,
+} from "../../../../redux/state";
 
 const CreatePost = (props) => {
-  let newPostElement = React.createRef();
-
   let addPostButtonClick = () => {
-    props.dispatch(addPostActionCreator());
-  }
+    props.dispatch(addPostCreator());
+  };
 
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
-  }
+  let onPostChange = (e) => {
+    let text = e.target.value;
+    props.dispatch(updateNewPostTextCreator(text));
+  };
 
   return (
     <>
@@ -25,10 +26,6 @@ const CreatePost = (props) => {
           <div className="new-post-input-area">
             <textarea
               className="post-textarea"
-              name="post-textarea"
-              cols="30"
-              rows="10"
-              ref={newPostElement}
               onChange={onPostChange}
               value={props.newPostText}
             ></textarea>

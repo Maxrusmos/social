@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SEND_MESSAGE = 'SEND-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 let store = {
   _state: {
     profilePage: {
@@ -32,7 +37,8 @@ let store = {
         {id: 8, message: "Чем занят?"}, 
         {id: 9, message: "Сдал лабу?"}, 
         {id: 10, message: "Гулять пойдешь?"}
-      ]
+      ],
+      newMessageText: '',
     },
   
     sideBar: {
@@ -51,7 +57,7 @@ let store = {
     return this._state;
   },
 
-  _callSubscriber(){
+  _callSubscriber() {
     console.log("state changed");
   },
 
@@ -71,17 +77,32 @@ let store = {
       }
       this._state.profilePage.newPostText = '';
       this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
+    } 
+    else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    } 
+    else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+      this._state.dialogPage.newMessageText = action.newMessageTextBody;
+      this._callSubscriber(this._state);
+    } 
+    else if (action.type === SEND_MESSAGE) {
+      if (this._state.dialogPage.newMessageText) {
+        this._state.dialogPage.messagesData.push({
+          id: 1,
+          message: this._state.dialogPage.newMessageText,
+        });
+      }
+      this._state.dialogPage.newMessageText = '';
       this._callSubscriber(this._state);
     }
   }
 }
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-export const addPostActionCreator = () => ({ type: ADD_POST })
-export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text })
+export const addPostCreator = () => ({ type: ADD_POST });
+export const updateNewPostTextCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text });
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
+export const updateNewMessageTextCreator = (messageText) => ({ type: UPDATE_NEW_MESSAGE_TEXT, newMessageTextBody: messageText });
 
 window.store = store;
 

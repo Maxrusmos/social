@@ -15,7 +15,7 @@ const SelectedDialog = (props) => {
           {messagesElements}
         </div>
         <div className="newMessage">
-          <CreateNewMessage></CreateNewMessage>
+          <CreateNewMessage newMessageText={props.newMessageText} dispatch={props.dispatch}></CreateNewMessage>
         </div>
       </div>
     </>

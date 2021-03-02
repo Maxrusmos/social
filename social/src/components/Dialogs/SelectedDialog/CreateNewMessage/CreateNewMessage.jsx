@@ -3,18 +3,24 @@ import "./createNewMessage.css";
 import attachMessage from "./../../../../res/attachMessage.png";
 import sendMessage from "./../../../../res/sendMessage.png";
 import sendVoice from "./../../../../res/sendVoice.png";
+import {
+  sendMessageCreator,
+  updateNewMessageTextCreator,
+} from "../../../../redux/state";
 
-const CreateNewMessage = () => {
-  let newMessageElement = React.createRef();
+const CreateNewMessage = (props) => {
+  let onSendMessageButtonClick = () => {
+    props.dispatch(sendMessageCreator());
+  };
 
-  let sendMessageButtonClick = () => {
-    let text = newMessageElement.current.textContent;
-    alert(text);
+  let onNewMessageChanged = (e) => {
+    let newMessageTextBody = e.target.value;
+    props.dispatch(updateNewMessageTextCreator(newMessageTextBody));
   };
 
   return (
     <>
-      <div className="">
+      <div>
         <hr />
         <div className="input-newMessage-block">
           <img
@@ -22,12 +28,12 @@ const CreateNewMessage = () => {
             src={attachMessage}
             alt="Прикрепить файл"
           />
-          <div
-            ref={newMessageElement}
+          <textarea
             className="createNewMessage-divInput"
-            data-text="Напишите сообщение..."
-            contentEditable="true"
-          ></div>
+            onChange={onNewMessageChanged}
+            placeholder="Напишите сообщение..."
+            value={props.newMessageText}
+          ></textarea>
           <img
             className="sendVoice"
             src={sendVoice}
@@ -37,7 +43,7 @@ const CreateNewMessage = () => {
             className="sendMessage"
             src={sendMessage}
             alt="отправить сообщение"
-            onClick={sendMessageButtonClick}
+            onClick={onSendMessageButtonClick}
           />
         </div>
       </div>

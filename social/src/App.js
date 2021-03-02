@@ -7,6 +7,7 @@ const App = (props) => {
       <Layout 
         postsData={props.appState.profilePage.postsData} 
         newPostText={props.appState.profilePage.newPostText} 
+        newMessageText={props.appState.dialogPage.newMessageText}
         dialogsData={props.appState.dialogPage.dialogsData} 
         messagesData={props.appState.dialogPage.messagesData}
         sideBarData={props.appState.sideBar.sideBarData}
