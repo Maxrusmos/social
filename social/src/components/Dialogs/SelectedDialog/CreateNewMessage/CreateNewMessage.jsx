@@ -3,19 +3,15 @@ import "./createNewMessage.css";
 import attachMessage from "./../../../../res/attachMessage.png";
 import sendMessage from "./../../../../res/sendMessage.png";
 import sendVoice from "./../../../../res/sendVoice.png";
-import {
-  sendMessageCreator,
-  updateNewMessageTextCreator,
-} from "../../../../redux/dialogsReducer";
 
 const CreateNewMessage = (props) => {
   let onSendMessageButtonClick = () => {
-    props.dispatch(sendMessageCreator());
+    props.sendMessage();
   };
 
   let onNewMessageChanged = (e) => {
     let newMessageTextBody = e.target.value;
-    props.dispatch(updateNewMessageTextCreator(newMessageTextBody));
+    props.updateNewMessageText(newMessageTextBody);
   };
 
   return (
