@@ -6,7 +6,7 @@ import sendVoice from "./../../../../res/sendVoice.png";
 import {
   sendMessageCreator,
   updateNewMessageTextCreator,
-} from "../../../../redux/state";
+} from "../../../../redux/dialogsReducer";
 
 const CreateNewMessage = (props) => {
   let onSendMessageButtonClick = () => {
@@ -29,7 +29,7 @@ const CreateNewMessage = (props) => {
             alt="Прикрепить файл"
           />
           <textarea
-            className="createNewMessage-divInput"
+            className="createNewMessage-textarea"
             onChange={onNewMessageChanged}
             placeholder="Напишите сообщение..."
             value={props.newMessageText}

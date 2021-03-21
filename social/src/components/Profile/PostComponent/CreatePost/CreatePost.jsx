@@ -6,7 +6,7 @@ import attachMusic from "./../../../../res/attachMusic.png";
 import {
   addPostCreator,
   updateNewPostTextCreator,
-} from "../../../../redux/state";
+} from "../../../../redux/profileReducer";
 
 const CreatePost = (props) => {
   let addPostButtonClick = () => {

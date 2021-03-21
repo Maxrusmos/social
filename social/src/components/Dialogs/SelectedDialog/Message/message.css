@@ -33,5 +33,7 @@
 }
 
 .message-text {
+  word-wrap: break-word;
   margin: 8px;
+  white-space: pre-line;
 }
