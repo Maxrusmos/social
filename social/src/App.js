@@ -5,6 +5,7 @@ const App = (props) => {
   return (
     <>
       <Layout 
+        store={props.store}
         postsData={props.appState.profilePage.postsData} 
         newPostText={props.appState.profilePage.newPostText} 
         newMessageText={props.appState.dialogPage.newMessageText}

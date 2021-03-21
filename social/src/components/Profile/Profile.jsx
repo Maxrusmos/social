@@ -8,12 +8,7 @@ const Profile = (props) => {
     <>
       <div className="profile-container">
         <ProfileInfo></ProfileInfo>
-        <PostComponent
-          postsData={props.postsData}
-          newPostText={props.newPostText}
-          dispatch={props.dispatch}
-          profilePhotoUrl={props.profilePhotoUrl}
-        ></PostComponent>
+        <PostComponent store={props.store}></PostComponent>
       </div>
     </>
   );

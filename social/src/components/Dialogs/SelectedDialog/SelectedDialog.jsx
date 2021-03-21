@@ -1,11 +1,12 @@
 import React from 'react';
-import CreateNewMessage from './CreateNewMessage/CreateNewMessage';
+import CreateNewMessageContainer from './CreateNewMessage/CreateNewMessageContainer';
 import Message from './Message/Message';
 import './selectedDialog.css';
 
 const SelectedDialog = (props) => {
-  let messagesElements = props.messagesData.map(m => <Message message={m.message}></Message>);
-
+  console.log(props);
+  let state = props.store.getState().dialogPage;
+  let messagesElements = state.messagesData.map(m => <Message message={m.message}></Message>);
   return (
     <>
       <div className="selected-dialog">
@@ -15,7 +16,7 @@ const SelectedDialog = (props) => {
           {messagesElements}
         </div>
         <div className="newMessage">
-          <CreateNewMessage newMessageText={props.newMessageText} dispatch={props.dispatch}></CreateNewMessage>
+          <CreateNewMessageContainer store={props.store}></CreateNewMessageContainer>
         </div>
       </div>
     </>

@@ -9,13 +9,13 @@ import {
 } from "../../../../redux/profileReducer";
 
 const CreatePost = (props) => {
-  let addPostButtonClick = () => {
-    props.dispatch(addPostCreator());
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updateNewPostTextCreator(text));
+    props.updateNewPostText(text);
   };
 
   return (
@@ -29,7 +29,7 @@ const CreatePost = (props) => {
               onChange={onPostChange}
               value={props.newPostText}
             ></textarea>
-            <button className="new-post-button" onClick={addPostButtonClick}>
+            <button className="new-post-button" onClick={onAddPost}>
               New Post
             </button>
           </div>

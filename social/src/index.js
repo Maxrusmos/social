@@ -10,6 +10,7 @@ let rerenderTree = () => {
     <React.StrictMode>
       <BrowserRouter>
         <App
+          store={store}
           appState={store.getState()}
           dispatch={store.dispatch.bind(store)}
         />

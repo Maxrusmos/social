@@ -7,8 +7,8 @@ const Dialogs = (props) => {
   return (
     <>
       <div className="main-dialogs-container">
-        <DialogSwitch dialogsData={props.dialogsData}></DialogSwitch>
-        <SelectedDialog newMessageText={props.newMessageText} messagesData={props.messagesData} dispatch={props.dispatch}></SelectedDialog>
+        <DialogSwitch dialogsData={props.store.getState().dialogPage.dialogsData}></DialogSwitch>
+        <SelectedDialog store={props.store}></SelectedDialog>
       </div>
     </>
   )

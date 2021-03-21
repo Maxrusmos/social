@@ -22,10 +22,7 @@ const Layout = (props) => {
               path="/profile"
               render={() => (
                 <Profile
-                  postsData={props.postsData}
-                  newPostText={props.newPostText}
-                  dispatch={props.dispatch}
-                  profilePhotoUrl={props.profilePhotoUrl}
+                  store={props.store}
                 ></Profile>
               )}
             ></Route>
@@ -33,10 +30,7 @@ const Layout = (props) => {
               path="/dialogs"
               render={() => (
                 <Dialogs
-                  newMessageText={props.newMessageText}
-                  dialogsData={props.dialogsData}
-                  messagesData={props.messagesData}
-                  dispatch={props.dispatch}
+                  store={props.store}
                 ></Dialogs>
               )}
             ></Route>
